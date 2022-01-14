@@ -4,8 +4,6 @@ from django.shortcuts import render
 
 
 def storage_information_view(request):
-    # Программируем здесь
-
     storage_visits = Visit.objects.filter(leaved_at=None)
     non_closed_visits = []
     for storage_visit in storage_visits:
