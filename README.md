@@ -1,21 +1,23 @@
-# Bank security console
+# Пульт охраны банка
 
-Web version of the system for recording visits to the bank's vault.
+Это внутренний репозиторий для сотрудников банка "Сияние". Если вы попали в  
+этот репозиторий случайно, то вы не сможете его запустить, т.к. у вас нет  
+доступа к БД, но можете свободно использовать код вёрстки или посмотреть как  
+реализованы запросы к БД.  
 
-### How to install
+Пульт охраны - это сайт, который можно подключить к удалённой азе данных с  
+визитами и карточками проспуска сотрудников нашего банка.
 
-Python3 should be already installed. 
-Then use `pip` (or `pip3`, if there is a conflict with Python2) to install dependencies:
+### Как установить
+
+Python3 должен быть установлен.  
+Затем в консоли введите `pip` (или `pip3`, если есть конфликт с Python2) чтобы установить зависимости:
 ```
 pip install -r requirements.txt
 ```
 
-### Examples of running the script
+### Примеры запуска скрипта
 
     python3 main.py
 
-Then open a browser and go to http://127.0.0.1:8000/
-
-### Project Goals
-
-The code is written for educational purposes on online-course for web-developers [dvmn.org](https://dvmn.org/).
+Затем откройте браузер и перейдите по адресу http://127.0.0.1:8000/
