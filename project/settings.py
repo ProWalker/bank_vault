@@ -6,19 +6,19 @@ load_dotenv()
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'HOST': os.getenv('HOST'),
-        'PORT': os.getenv('PORT'),
-        'NAME': os.getenv('DATABASE_NAME'),
-        'USER': os.getenv('USER'),
-        'PASSWORD': os.getenv('PASSWORD'),
+        'HOST': os.getenv('VAULT_HOST'),
+        'PORT': os.getenv('VAULT_PORT'),
+        'NAME': os.getenv('VAULT_DATABASE_NAME'),
+        'USER': os.getenv('VAULT_USER'),
+        'PASSWORD': os.getenv('VAULT_PASSWORD'),
     }
 }
 
 INSTALLED_APPS = ['datacenter']
 
-SECRET_KEY = os.getenv('SECRET_KEY')
+SECRET_KEY = os.getenv('VAULT_SECRET_KEY')
 
-DEBUG = os.getenv('DEBUG')
+DEBUG = os.getenv('VAULT_DEBUG')
 
 ROOT_URLCONF = "project.urls"
 
