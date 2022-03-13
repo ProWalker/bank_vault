@@ -16,7 +16,7 @@ SECRET_KEY = os.getenv('VAULT_SECRET_KEY')
 
 DEBUG = os.getenv('VAULT_DEBUG')
 
-ROOT_URLCONF = "project.urls"
+ROOT_URLCONF = 'project.urls'
 
 ALLOWED_HOSTS = ['*']
 
