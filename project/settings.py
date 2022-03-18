@@ -1,25 +1,26 @@
 import os
 import dj_database_url
 
-from dotenv import load_dotenv
-from distutils.util import strtobool
-load_dotenv()
+from environs import Env
+
+env = Env()
+env.read_env()
 
 db_engine = 'django.db.backends.postgresql_psycopg2'
 
 DATABASES = {
-    'default': dj_database_url.parse(os.getenv('DB_URL'), db_engine)
+    'default': dj_database_url.parse(env('DB_URL'), db_engine)
 }
 
 INSTALLED_APPS = ['datacenter']
 
-SECRET_KEY = os.getenv('SECRET_KEY')
+SECRET_KEY = env('SECRET_KEY')
 
-DEBUG = strtobool(os.getenv('DEBUG'))
+DEBUG = env.bool('DEBUG')
 
 ROOT_URLCONF = 'project.urls'
 
-ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = env.list('ALLOWED_HOSTS')
 
 
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
